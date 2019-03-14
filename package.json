@@ -1,0 +1,24 @@
+{
+	"name": "project_euler",
+	"version": "1.0.0",
+	"description": "## Solutions to 5 problems in Project Euler using JavaScript",
+	"main": "solutions.js",
+	"scripts": {
+		"dev": "lite-server",
+		"test": "jest --watchAll"
+	},
+	"devDependencies": {
+		"jest": "^24.1.0",
+		"lite-server": "^2.3.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/47analogy/project_euler.git"
+	},
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/47analogy/project_euler/issues"
+	},
+	"homepage": "https://github.com/47analogy/project_euler#readme"
+}
