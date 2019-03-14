@@ -1,4 +1,4 @@
-const { mult3And5, fibonacci } = require('./solutions');
+const { mult3And5, fibonacci, largePrimeFactor } = require('./solutions');
 
 describe('Tests for mult3And5', () => {
 	test('mult3And5 is a function', () => {
@@ -25,5 +25,19 @@ describe('Tests for fibonacci', () => {
 
 	test('outputs sum of first 5 even fibonacci numbers', () => {
 		expect(fibonacci(5)).toEqual(10);
+	});
+});
+
+describe('Tests for largePrimeFactor', () => {
+	test('largePrimeFactor is a function', () => {
+		expect(typeof largePrimeFactor).toEqual('function');
+	});
+
+	test('outputs a number', () => {
+		expect(typeof largePrimeFactor(1000)).toBe('number');
+	});
+
+	test('outputs largest prime factor', () => {
+		expect(largePrimeFactor(13195)).toEqual(29);
 	});
 });

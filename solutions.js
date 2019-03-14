@@ -20,6 +20,8 @@ const mult3And5 = num => {
 	return sum;
 };
 
+//Even Fibonacci numbers
+
 // loop through numbers (4,000,000)
 // add the current number to the previous num
 // if the sum is even, add to array
@@ -47,4 +49,30 @@ const fibonacci = num => {
 	return fibSum;
 };
 
-module.exports = { mult3And5, fibonacci };
+// Largest prime factor
+
+// while num is divisible by 2
+// if num is divisible by 2, push quotient to array of factors
+// otherwise increase divisor by 1
+// if num is divisible by divisor, push quotient to array of factors
+// continue loop until num is greater than or equal to divisor squared
+// return last element in array
+const largePrimeFactor = num => {
+	let i = 2;
+	const factorArr = [];
+	let gpf;
+
+	do {
+		if (num % i === 0) {
+			num = num / i;
+			factorArr.push(num);
+		} else {
+			i += 1;
+		}
+	} while (num >= Math.pow(i, 2));
+
+	gpf = factorArr.pop();
+	return gpf;
+};
+
+module.exports = { mult3And5, fibonacci, largePrimeFactor };
