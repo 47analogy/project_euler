@@ -18,4 +18,4 @@
 #### How to install and run
 
 - Install dependencies: `yarn install`
-- Run the server: `yarn test`
+- Run the tests: `yarn test`
