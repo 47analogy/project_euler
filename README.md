@@ -4,8 +4,18 @@
 
 ### _Challenges_
 
-- Multiples of 3 and 5
-- Even Fibonacci numbers
-- Largest prime factor
-- Largest palindrome product
-- Smallest multiple
+- Multiples of 3 and 5 [X]
+- Even Fibonacci numbers [X]
+- Largest prime factor [X]
+- Largest palindrome product [X]
+- Smallest multiple [ ]
+
+#### Dependencies
+
+- [lite-server](https://github.com/johnpapa/lite-server)
+- [jest](https://jestjs.io/)
+
+#### How to install and run
+
+- Install dependencies: `yarn install`
+- Run the server: `yarn test`
