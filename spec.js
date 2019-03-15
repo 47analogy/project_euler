@@ -1,4 +1,9 @@
-const { mult3And5, fibonacci, largePrimeFactor } = require('./solutions');
+const {
+	mult3And5,
+	fibonacci,
+	largePrimeFactor,
+	largePalidrome
+} = require('./solutions');
 
 describe('Tests for mult3And5', () => {
 	test('mult3And5 is a function', () => {
@@ -39,5 +44,19 @@ describe('Tests for largePrimeFactor', () => {
 
 	test('outputs largest prime factor', () => {
 		expect(largePrimeFactor(13195)).toEqual(29);
+	});
+});
+
+describe('Tests for largePalidrome', () => {
+	test('largePalidrome is a function', () => {
+		expect(typeof largePalidrome).toEqual('function');
+	});
+
+	test('outputs a number', () => {
+		expect(typeof largePalidrome(99, 99)).toBe('number');
+	});
+
+	test('outputs largest palidrome', () => {
+		expect(largePalidrome(99, 99)).toEqual(9009);
 	});
 });

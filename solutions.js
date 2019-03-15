@@ -75,4 +75,36 @@ const largePrimeFactor = num => {
 	return gpf;
 };
 
-module.exports = { mult3And5, fibonacci, largePrimeFactor };
+// Largest palindrome product
+
+// loop through products of numbers decreasing the numbers on every iteration
+// if the product length is even, check if it's a palidrome
+// if product is a palidrome, place into an array
+// get the highest number in the array and return it
+
+const largePalidrome = (num1, num2) => {
+	let gp;
+	const prodArr = [];
+
+	for (let i = num1; i > 0; i--) {
+		for (let j = num2; j > 0; j--) {
+			let prod = i * j;
+			if (prod.toString().length % 2 === 0) {
+				// check for palidrome by reversing and comparing number
+				let numRev = prod
+					.toString()
+					.split('')
+					.reverse()
+					.join('');
+
+				if (Number(prod) === Number(numRev)) {
+					prodArr.push(prod);
+					gp = Math.max(...prodArr);
+				}
+			}
+		}
+	}
+	return gp;
+};
+
+module.exports = { mult3And5, fibonacci, largePrimeFactor, largePalidrome };
