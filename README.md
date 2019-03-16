@@ -8,7 +8,7 @@
 - Even Fibonacci numbers [X]
 - Largest prime factor [X]
 - Largest palindrome product [X]
-- Smallest multiple [ ]
+- Smallest multiple [X]
 
 #### Dependencies
 
@@ -18,4 +18,4 @@
 #### How to install and run
 
 - Install dependencies: `yarn install`
-- Run the tests: `yarn test`
+- Run tests: `yarn test`

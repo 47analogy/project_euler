@@ -2,7 +2,8 @@ const {
 	mult3And5,
 	fibonacci,
 	largePrimeFactor,
-	largePalidrome
+	largePalidrome,
+	smallMult
 } = require('./solutions');
 
 describe('Tests for mult3And5', () => {
@@ -58,5 +59,19 @@ describe('Tests for largePalidrome', () => {
 
 	test('outputs largest palidrome', () => {
 		expect(largePalidrome(99, 99)).toEqual(9009);
+	});
+});
+
+describe('Tests for smallMult', () => {
+	test('smallMult is a function', () => {
+		expect(typeof largePalidrome).toEqual('function');
+	});
+
+	test('outputs a number', () => {
+		expect(typeof smallMult(10)).toBe('number');
+	});
+
+	test('outputs smallMult', () => {
+		expect(smallMult(10)).toEqual(2520);
 	});
 });

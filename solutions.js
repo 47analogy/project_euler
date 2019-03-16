@@ -107,4 +107,38 @@ const largePalidrome = (num1, num2) => {
 	return gp;
 };
 
-module.exports = { mult3And5, fibonacci, largePrimeFactor, largePalidrome };
+// Smallest multiple
+
+// create array from largest to smallest number
+// multiply first 2 numbers of array, set it as 'lcm' and loop (outer) until end of array
+// start inner loop at 3rd number and check if 'lcm' can be divided by every number
+// if it can't, increase the 'lcm' value by a factor and continue with the outer loop
+// return the lcm
+
+const smallMult = num => {
+	const numArr = [];
+	let j = 2;
+	let k = 1;
+
+	for (let i = num; i >= 1; i--) {
+		numArr.push(i);
+	}
+
+	while (j !== numArr.length) {
+		lcm = numArr[0] * k * numArr[1];
+
+		for (j = 2; j < numArr.length; j++) {
+			if (lcm % numArr[j] !== 0) break;
+		}
+		k++;
+	}
+	return lcm;
+};
+
+module.exports = {
+	mult3And5,
+	fibonacci,
+	largePrimeFactor,
+	largePalidrome,
+	smallMult
+};
